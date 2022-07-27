@@ -1,11 +1,22 @@
-var pronoun = ['the','our','this', 'those'];
-var adj = ['great', 'big', 'magical', 'amazing'];
-var noun = ['jogger','racoon', 'cat', 'dolphin'];
+window.onload = function () {
 
-let pronounIndex = Math.floor(Math.random() * pronoun.length);
-let adjIndex = Math.floor(Math.random() * adj.length);
-let nounIndex = Math.floor(Math.random() * noun.length);
+    let domainNameGenerator = [];
 
-let resultado=pronoun[pronounIndex]+adj[adjIndex]+noun[nounIndex]+ '.com';
-console.log(resultado);
+    let pronoun = ['the', 'our', 'this', 'those'];
+    let adj = ['great', 'big', 'magical', 'amazing'];
+    let noun = ['jogger', 'racoon', 'cat', 'dolphin'];
+    let dom = ['net', 'com', '.cl'];
 
+    for (let a = 0; a < pronoun.length; a++) {
+        for (let s = 0; s < adj.length; s++) {
+            for (let d = 0; d < noun.length; d++) {
+                for (let f = 0; d < dom.length; f++) {
+                    domainNameGenerator.push(pronoun[a] + adj[s] + noun[d] + dom[f]);
+                }
+            }
+        }
+    }
+
+
+    console.log(domainNameGenerator);
+};
